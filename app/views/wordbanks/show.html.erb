@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @wordbank.topic %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @wordbank.description %>
+</p>
+
+<%= link_to 'Edit', edit_wordbank_path(@wordbank) %> |
+<%= link_to 'Back', wordbanks_path %>

@@ -1,0 +1,2 @@
+module WordbanksHelper
+end

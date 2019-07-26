@@ -4,9 +4,9 @@ This is a simple web application that should display the *Word of the Day* and i
 
 Used in this project:
 
-* Ruby version 2.2
+* Ruby version 2.4.1
 
-* Runs on the rails framework
+* Runs on the rails framework (Rails 5.2.3)
 
 * Deployment instructions
 

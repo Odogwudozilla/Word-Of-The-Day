@@ -1,8 +1,5 @@
 <p id="notice"><%= notice %></p>
-
-<h1 class="m-3 ">Word of the Day</h1>
-
-<!-- <div class="row"> -->
+<h1 class="mb-3">Today's Word</h1>
 
 <div class="card-columns cardwrapper ">
   <% @wordbanks.each do |wordbank| %>
@@ -15,13 +12,10 @@
     </p>
     <div class="buttons p-3 ">
 
-      <%= link_to edit_wordbank_path(wordbank) do %>
-      <button class="btn btn-success mr-3"> Edit </button>
+      <%= link_to  wordbanks_path do %>
+      <button class="btn btn-success mr-3"> View list </button>
       <% end %>
 
-      <%= link_to wordbank, method: :delete, data: { confirm: 'Are you sure?' } do %>
-      <button class="btn btn-danger"> Delete </button>
-      <% end %>
     </div>
 
     <div class="card-footer">
@@ -34,5 +28,4 @@
 
 
 <br>
-
 <%= link_to 'Add a new Word of the Day', new_wordbank_path %>

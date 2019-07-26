@@ -7,6 +7,12 @@ class WordbanksController < ApplicationController
     @wordbanks = Wordbank.all
   end
 
+  def displayPage
+    @wordbanks = Wordbank.all.sample(1)
+  end
+  
+
+
   # GET /wordbanks/1
   # GET /wordbanks/1.json
   def show

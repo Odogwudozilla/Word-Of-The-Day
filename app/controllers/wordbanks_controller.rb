@@ -27,6 +27,8 @@ class WordbanksController < ApplicationController
   def edit
   end
 
+  
+
   # POST /wordbanks
   # POST /wordbanks.json
   def create

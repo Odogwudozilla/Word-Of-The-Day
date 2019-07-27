@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h1 class="mb-3">Today's Word</h1>
 
+<!-- displays the word of the day  -->
 <div class="card-columns cardwrapper ">
   <% @wordbanks.each do |wordbank| %>
   <div class="card border-primary mb-5">
@@ -21,11 +22,11 @@
     <div class="card-footer">
       <small class="text-muted">Created on <%= wordbank.created_at %></small>
     </div>
-    <!-- #.striftime("%j-%m-%y: %I:%M %p") -->
   </div>
   <% end %>
 </div>
 
 
 <br>
+<!-- link to create new word of the day -->
 <%= link_to 'Add a new Word of the Day', new_wordbank_path %>

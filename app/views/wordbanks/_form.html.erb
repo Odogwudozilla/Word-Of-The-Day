@@ -1,27 +1,33 @@
 <%= form_with(model: wordbank, local: true) do |form| %>
-  <% if wordbank.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(wordbank.errors.count, "error") %> prohibited this wordbank from being saved:</h2>
+<% if wordbank.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(wordbank.errors.count, "error") %> prohibited this wordbank from being saved:</h2>
 
-      <ul>
-      <% wordbank.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% wordbank.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="field">
+<div class="field my-3 ">
+  <div class="font-weight-bold">
+
     <%= form.label :topic %>
-    <%= form.text_area :topic %>
   </div>
+  <%= form.text_area :topic %>
+</div>
 
-  <div class="field">
+<div class="field">
+  <div class="font-weight-bold">
     <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
   </div>
+  <%= form.text_area :description %>
+</div>
+
+<div class="actions my-5">
+  <%= form.submit "Submit" %>
+</div>
 <% end %>

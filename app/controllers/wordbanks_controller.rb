@@ -4,22 +4,22 @@ class WordbanksController < ApplicationController
   # GET /wordbanks
   # GET /wordbanks.json
   def index
-    @wordbanks = Wordbank.all
+    @wordbanks = Wordbank.all # calls all data in the database
   end
 
   def displayPage
-    @wordbanks = Wordbank.all.sample(1)
+    @wordbanks = Wordbank.all.sample(1) #randommly samples one instance of the word of the day from the database to be displayed in the homepage
   end
   
 
 
   # GET /wordbanks/1
   # GET /wordbanks/1.json
-  def show
+  def show # shows the selected word of the day (redundant)
   end
 
   # GET /wordbanks/new
-  def new
+  def new #new instance of the class 
     @wordbank = Wordbank.new
   end
 
@@ -36,7 +36,7 @@ class WordbanksController < ApplicationController
 
     respond_to do |format|
       if @wordbank.save
-        format.html { redirect_to @wordbank, notice: 'Wordbank was successfully created.' }
+        format.html { redirect_to @wordbank, notice: 'Word of the Day was successfully created.' }
         format.json { render :show, status: :created, location: @wordbank }
       else
         format.html { render :new }
@@ -50,7 +50,7 @@ class WordbanksController < ApplicationController
   def update
     respond_to do |format|
       if @wordbank.update(wordbank_params)
-        format.html { redirect_to @wordbank, notice: 'Wordbank was successfully updated.' }
+        format.html { redirect_to @wordbank, notice: 'Word of the Day  was successfully updated.' }
         format.json { render :show, status: :ok, location: @wordbank }
       else
         format.html { render :edit }
@@ -64,7 +64,7 @@ class WordbanksController < ApplicationController
   def destroy
     @wordbank.destroy
     respond_to do |format|
-      format.html { redirect_to wordbanks_url, notice: 'Wordbank was successfully destroyed.' }
+      format.html { redirect_to wordbanks_url, notice: 'Word of the Day  was successfully deleted.' }
       format.json { head :no_content }
     end
   end
